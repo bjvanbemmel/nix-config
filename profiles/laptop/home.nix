@@ -6,6 +6,7 @@
     ../../user/lang/golang/golang.nix
     ../../user/app/neovim/neovim.nix
     ../../user/app/gh/gh.nix
+    ../../user/app/ripgrep/ripgrep.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
