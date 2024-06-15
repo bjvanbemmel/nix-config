@@ -24,6 +24,20 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Fonts
+  fonts = {
+    packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      jetbrains-mono
+    ];
+
+    fontconfig = {
+      defaultFonts = {
+        monospace = [ "JetBrainsMono" ];
+      };
+    };
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
@@ -82,9 +96,6 @@
     isNormalUser = true;
     description = "Beau Jean van Bemmel";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
 
   # Set ZSH as default shell
@@ -103,7 +114,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    git
+    xsel
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

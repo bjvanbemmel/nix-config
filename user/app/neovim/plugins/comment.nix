@@ -5,8 +5,8 @@
     enable = true;
 
     settings = {
-      opleader.line = "<C-_>";
-      toggler.line = "<C-_>";
+      opleader.line = "<leader>c";
+      toggler.line = "<leader>c";
     };
   };
 }

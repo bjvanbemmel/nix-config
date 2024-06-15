@@ -6,6 +6,7 @@
     ../../user/lang/golang/golang.nix
     ../../user/app/neovim/neovim.nix
     ../../user/app/gh/gh.nix
+    ../../user/app/git/git.nix
     ../../user/app/ripgrep/ripgrep.nix
   ];
 
@@ -60,9 +61,9 @@
   #
   #  /etc/profiles/per-user/beauv/etc/profile.d/hm-session-vars.sh
   #
-  # home.sessionVariables = {
-  #  EDITOR = "nvim";
-  # };
+  home.sessionVariables = {
+   EDITOR = "nvim";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

@@ -7,6 +7,7 @@
     ./plugins/comment.nix
     ./plugins/oil.nix
     ./plugins/luasnip.nix
+    ./plugins/lualine.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./keybinds.nix
@@ -36,5 +37,7 @@
       wrap = true; # Overflowing text will wrap to a new pseudo-line
       mouse = ""; # Disable the annoying mouse control
     };
+
+    clipboard.providers.xsel.enable = true;
   };
 }
