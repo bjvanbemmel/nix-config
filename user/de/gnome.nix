@@ -20,6 +20,10 @@
       natural-scroll = false;
     };
 
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "appmenu:minimize,close";
+    };
+
     "org/gnome/shell" = {
       favorite-apps = [
         "firefox.desktop"

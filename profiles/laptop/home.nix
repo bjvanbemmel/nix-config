@@ -4,6 +4,7 @@
   imports = [
     ../../user/shell/zsh/zsh.nix
     ../../user/lang/golang/golang.nix
+    ../../user/app/chromium/chromium.nix
     ../../user/app/firefox/firefox.nix
     ../../user/app/neovim/neovim.nix
     ../../user/app/gh/gh.nix
@@ -11,6 +12,7 @@
     ../../user/app/git/git.nix
     ../../user/app/ripgrep/ripgrep.nix
     ../../user/app/thunderbird/thunderbird.nix
+    ../../user/app/vivaldi/vivaldi.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -70,4 +72,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
 }
