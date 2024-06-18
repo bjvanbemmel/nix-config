@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./default-apps.nix
     ./keybindings.nix
   ];
 
