@@ -29,6 +29,7 @@
     packages = with pkgs; [
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       jetbrains-mono
+      noto-fonts-cjk
     ];
 
     fontconfig = {
@@ -56,18 +57,28 @@
     LC_TIME = "nl_NL.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  i18n.inputMethod = {
+    enabled = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [
+      anthy
+    ];
+  };
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    excludePackages = with pkgs; [
+      xterm
+    ];
+  };
   programs.dconf.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+    layout = "us,jp";
+    variant = "altgr-intl";
   };
 
   # Enable CUPS to print documents.
