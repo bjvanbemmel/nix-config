@@ -4,10 +4,13 @@
   imports = [
     ../../user/shell/zsh/zsh.nix
     ../../user/lang/golang/golang.nix
+    ../../user/app/firefox/firefox.nix
     ../../user/app/neovim/neovim.nix
     ../../user/app/gh/gh.nix
+    ../../user/de/gnome.nix
     ../../user/app/git/git.nix
     ../../user/app/ripgrep/ripgrep.nix
+    ../../user/app/thunderbird/thunderbird.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

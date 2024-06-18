@@ -62,6 +62,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  programs.dconf.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -105,9 +106,6 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -115,6 +113,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     xsel
+    gnome.gnome-tweaks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
