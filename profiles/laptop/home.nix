@@ -7,6 +7,7 @@
     ../../user/app/chromium/chromium.nix
     ../../user/app/firefox/firefox.nix
     ../../user/app/neovim/neovim.nix
+    ../../user/app/mpv/mpv.nix
     ../../user/app/gh/gh.nix
     ../../user/de/gnome.nix
     ../../user/app/git/git.nix
@@ -33,6 +34,7 @@
   # environment.
   home.packages = with pkgs; [
     tree
+    discord
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
