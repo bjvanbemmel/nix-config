@@ -125,7 +125,11 @@
   environment.systemPackages = with pkgs; [
     xsel
     gnome.gnome-tweaks
+    framework-tool
+    linuxKernel.packages.linux_6_6.framework-laptop-kmod
   ];
+
+  boot.extraModulePackages = [ pkgs.linuxKernel.packages.linux_6_6.framework-laptop-kmod ]; # TODO: Make it possible to limit charging using this kernel module. Hint: Might need cros_ec as well.
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
