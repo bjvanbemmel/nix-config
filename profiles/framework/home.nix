@@ -36,6 +36,7 @@
     tree
     discord
     teams-for-linux
+    fastfetch
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

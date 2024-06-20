@@ -11,9 +11,12 @@
       url = "github:nix-community/nixvim/nixos-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }:
+  outputs = { self, nixpkgs, home-manager, nixvim, nixos-hardware, ... }:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -28,7 +31,10 @@
       };
       "framework" = lib.nixosSystem {
         inherit system;
-	        modules = [ ./profiles/${profile}/configuration.nix ];
+	        modules = [
+            ./profiles/${profile}/configuration.nix
+            nixos-hardware.nixosModules.framework-13-7040-amd
+          ];
       };
     };
     homeConfigurations = {

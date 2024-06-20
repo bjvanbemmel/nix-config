@@ -163,4 +163,12 @@
 
   # Framework BIOS gets managed through LVFS
   services.fwupd.enable = true;
+
+  # Power efficiency for Framework
+  services.power-profiles-daemon.enable = true;
+
+  # Enable fingerprinter
+  services.fprintd = {
+    enable = true;
+  };
 }
