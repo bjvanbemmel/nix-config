@@ -160,4 +160,7 @@
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Framework BIOS gets managed through LVFS
+  services.fwupd.enable = true;
 }

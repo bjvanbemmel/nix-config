@@ -17,12 +17,16 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "laptop";
+    profile = "framework";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
     nixosConfigurations = {
       "laptop" = lib.nixosSystem {
+        inherit system;
+	        modules = [ ./profiles/${profile}/configuration.nix ];
+      };
+      "framework" = lib.nixosSystem {
         inherit system;
 	        modules = [ ./profiles/${profile}/configuration.nix ];
       };

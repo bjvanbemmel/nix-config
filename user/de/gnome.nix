@@ -1,11 +1,11 @@
 { config, pkgs, lib, ... }:
 
 let
-  wallpaper = fetchTree {
-    type = "file";
-    url = "https://wallpaper.bjvanbemmel.nl";
-    narHash = "sha256-3wtS1YNIXmRRlP4wYCQT2JvIxLxkBVeE/cXhBZnT2DU=";
-  };
+ wallpaper = fetchTree {
+   type = "file";
+   url = "https://wallpaper.bjvanbemmel.nl";
+   narHash = "sha256-3wtS1YNIXmRRlP4wYCQT2JvIxLxkBVeE/cXhBZnT2DU=";
+ };
 in
 {
   imports = [
@@ -32,10 +32,10 @@ in
       button-layout = "appmenu:minimize,close";
     };
 
-    "org/gnome/desktop/background" = {
-      picture-uri = "file://" + wallpaper.outPath;
-      picture-uri-dark = "file://" + wallpaper.outPath;
-    };
+   "org/gnome/desktop/background" = {
+     picture-uri = "file://" + wallpaper.outPath;
+     picture-uri-dark = "file://" + wallpaper.outPath;
+   };
 
     # Japanese input as well as English (with modifier key)
     "org/gnome/desktop/input-sources" = with lib.hm.gvariant; {
