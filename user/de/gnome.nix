@@ -8,6 +8,10 @@ let
  };
 in
 {
+  home.packages = with pkgs; [
+    gnomeExtensions.appindicator
+  ];
+
   imports = [
     ./default-apps.nix
     ./keybindings.nix
