@@ -20,7 +20,7 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "framework";
+    profile = "desktop";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
@@ -35,6 +35,12 @@
             ./profiles/${profile}/configuration.nix
             nixos-hardware.nixosModules.framework-13-7040-amd
           ];
+      };
+      "desktop" = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./profiles/${profile}/configuration.nix
+        ];
       };
     };
     homeConfigurations = {

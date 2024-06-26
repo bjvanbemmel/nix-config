@@ -31,6 +31,10 @@ in
       tap-to-click = true;
       natural-scroll = false;
     };
+    
+    "org/gnome/desktop/peripherals/mouse" = {
+      accel-profile = "flat";
+    };
 
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,close";
