@@ -25,6 +25,7 @@ in
 
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
+      edge-tiling = true;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
