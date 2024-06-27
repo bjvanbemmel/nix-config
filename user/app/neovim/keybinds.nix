@@ -23,6 +23,11 @@
         mode = [ "n" "v" ];
         action = "<cmd>lua vim.lsp.buf.rename()<CR>"; # Todo: make this a function that also writes every affected file
       }
+      {
+        key = "<leader>a";
+        mode = [ "n" "v" ];
+        action = "<cmd>lua vim.lsp.buf.code_action()<CR>"; # Todo: make this a function that also writes every affected file
+      }
     ];
   };
 }
