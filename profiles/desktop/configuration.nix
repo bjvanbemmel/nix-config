@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../system/app/steam/steam.nix
+      ../../system/service/avahi/avahi.nix
     ];
 
   # Bootloader.
@@ -85,12 +86,6 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
