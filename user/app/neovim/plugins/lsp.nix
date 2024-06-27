@@ -7,6 +7,7 @@
       gopls.enable = true; # Golang
       nixd.enable = true; # Nix
       lua-ls.enable = true; # Lua
+      omnisharp.enable = true; # C#
     };
   };
 }
