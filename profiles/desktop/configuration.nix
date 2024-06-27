@@ -11,6 +11,7 @@
       ../../system/app/steam/steam.nix
       ../../system/service/avahi/avahi.nix
       ../../system/service/networking/networking.nix
+      ../../system/i18n/i18n.nix
     ];
 
   # Bootloader.
@@ -29,7 +30,6 @@
     packages = with pkgs; [
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
       jetbrains-mono
-      noto-fonts-cjk
       wqy_zenhei
     ];
 
@@ -42,28 +42,6 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "nl_NL.UTF-8";
-    LC_IDENTIFICATION = "nl_NL.UTF-8";
-    LC_MEASUREMENT = "nl_NL.UTF-8";
-    LC_MONETARY = "nl_NL.UTF-8";
-    LC_NAME = "nl_NL.UTF-8";
-    LC_NUMERIC = "nl_NL.UTF-8";
-    LC_PAPER = "nl_NL.UTF-8";
-    LC_TELEPHONE = "nl_NL.UTF-8";
-    LC_TIME = "nl_NL.UTF-8";
-  };
-
-  i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [
-      anthy
-    ];
-  };
 
   # Enable the GNOME Desktop Environment.
   services.xserver = {
