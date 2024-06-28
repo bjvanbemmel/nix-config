@@ -12,11 +12,8 @@
       ../../system/service/avahi/avahi.nix
       ../../system/service/networking/networking.nix
       ../../system/i18n/i18n.nix
+      ../../system/boot/boot.nix
     ];
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
