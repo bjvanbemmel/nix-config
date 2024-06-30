@@ -37,6 +37,7 @@
     discord
     teams-for-linux
     fastfetch
+    beekeeper-studio
     obsidian
   ];
 
