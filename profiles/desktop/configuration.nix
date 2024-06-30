@@ -9,10 +9,11 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../system/app/steam/steam.nix
+      ../../system/boot/boot.nix
+      ../../system/i18n/i18n.nix
       ../../system/service/avahi/avahi.nix
       ../../system/service/networking/networking.nix
-      ../../system/i18n/i18n.nix
-      ../../system/boot/boot.nix
+      ../../system/virtualisation/docker/docker.nix
     ];
 
   networking.hostName = "laptop"; # Define your hostname.
