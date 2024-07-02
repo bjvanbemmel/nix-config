@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../system/boot/boot.nix
+      ../../system/environment/excluded-apps.nix
       ../../system/i18n/i18n.nix
       ../../system/service/avahi/avahi.nix
       ../../system/service/networking/networking.nix

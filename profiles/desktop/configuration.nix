@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../../system/app/steam/steam.nix
       ../../system/boot/boot.nix
+      ../../system/environment/excluded-apps.nix
       ../../system/i18n/i18n.nix
       ../../system/service/avahi/avahi.nix
       ../../system/service/networking/networking.nix
