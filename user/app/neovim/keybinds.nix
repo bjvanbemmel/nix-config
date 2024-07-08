@@ -31,7 +31,7 @@
       {
         key = "<leader>sd";
         mode = [ "n" ];
-        action = "<cmd>lua vim.diagnostics.open_float()<CR>";
+        action = "<cmd>lua vim.diagnostic.open_float()<CR>";
       }
       {
         key = "<leader>ss";
