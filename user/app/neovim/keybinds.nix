@@ -28,6 +28,16 @@
         mode = [ "n" "v" ];
         action = "<cmd>lua vim.lsp.buf.code_action()<CR>"; # Todo: make this a function that also writes every affected file
       }
+      {
+        key = "<leader>sd";
+        mode = [ "n" ];
+        action = "<cmd>lua vim.diagnostics.open_float()<CR>";
+      }
+      {
+        key = "<leader>ss";
+        mode = [ "n" ];
+        action = "<cmd>lua vim.lsp.buf.hover()<CR>";
+      }
     ];
   };
 }
