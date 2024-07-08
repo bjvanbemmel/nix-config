@@ -3,7 +3,6 @@
 {
   imports = [
     ../../user/shell/zsh/zsh.nix
-    ../../user/lang/golang/golang.nix
     ../../user/app/chromium/chromium.nix
     ../../user/app/firefox/firefox.nix
     ../../user/app/neovim/neovim.nix
@@ -32,10 +31,15 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    pkgs.tree
-    pkgs.discord
-    pkgs.gamemode
+  home.packages = with pkgs; [
+    tree
+    discord
+    gamemode
+    teams-for-linux
+    fastfetch
+    beekeeper-studio
+    obsidian
+    rhythmbox
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

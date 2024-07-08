@@ -3,7 +3,6 @@
 {
   imports = [
     ../../user/shell/zsh/zsh.nix
-    ../../user/lang/golang/golang.nix
     ../../user/app/chromium/chromium.nix
     ../../user/app/firefox/firefox.nix
     ../../user/app/neovim/neovim.nix

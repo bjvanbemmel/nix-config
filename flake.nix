@@ -22,7 +22,7 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "framework";
+    profile = "desktop";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
