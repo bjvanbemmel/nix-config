@@ -10,6 +10,7 @@ in
 {
   home.packages = with pkgs; [
     gnomeExtensions.appindicator
+    adw-gtk3
   ];
 
   imports = [
@@ -20,6 +21,7 @@ in
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
+      gtk-theme = "adw-gtk3-dark";
       enable-hot-corners = true;
     };
 
