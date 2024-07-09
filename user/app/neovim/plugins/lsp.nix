@@ -16,6 +16,7 @@
       jsonls.enable = true; # JSON
       eslint.enable = true; # ESLint
       html.enable = true; # HTML
+      sqls.enable = true; # SQL
     };
   };
 }
