@@ -2,17 +2,18 @@
 
 {
   imports = [
-    ../../user/shell/zsh/zsh.nix
     ../../user/app/chromium/chromium.nix
     ../../user/app/firefox/firefox.nix
     ../../user/app/neovim/neovim.nix
     ../../user/app/mpv/mpv.nix
     ../../user/app/gh/gh.nix
-    ../../user/de/gnome.nix
     ../../user/app/git/git.nix
     ../../user/app/ripgrep/ripgrep.nix
     ../../user/app/thunderbird/thunderbird.nix
     ../../user/app/vivaldi/vivaldi.nix
+    ../../user/de/gnome.nix
+    ../../user/shared/packages.nix
+    ../../user/shell/zsh/zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -32,15 +33,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    tree
-    discord
     gamemode
-    teams-for-linux
-    fastfetch
-    beekeeper-studio
-    obsidian
-    rhythmbox
-    bruno
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
