@@ -5,7 +5,7 @@
     enable = true;
     config = {
       slang = "en,jp";
-      alang = "jp,en";
+      alang = "jp,jpn,en,eng";
       sub-font-size = 35;
       sub-pos = 90;
     };

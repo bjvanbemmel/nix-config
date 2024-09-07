@@ -17,6 +17,7 @@
       eslint.enable = true; # ESLint
       html.enable = true; # HTML
       sqls.enable = true; # SQL
+      pyright.enable = true; # Python
     };
   };
 }
