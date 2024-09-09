@@ -69,7 +69,6 @@
   #
   home.sessionVariables = {
    EDITOR = "nvim";
-   XDG_CURRENT_DESKTOP = "sway";
   };
 
   # Let Home Manager install and manage itself.
