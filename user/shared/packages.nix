@@ -8,5 +8,6 @@
     obsidian
     rhythmbox
     bruno
+    libreoffice-qt
   ];
 }
