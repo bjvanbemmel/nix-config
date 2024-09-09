@@ -16,6 +16,7 @@
       jsonls.enable = true; # JSON
       eslint.enable = true; # ESLint
       html.enable = true; # HTML
+      cssls.enable = true; # CSS
       sqls.enable = true; # SQL
       pyright.enable = true; # Python
     };
