@@ -22,15 +22,11 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "desktop";
+    profile = "";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
     nixosConfigurations = {
-      "laptop" = lib.nixosSystem {
-        inherit system;
-	        modules = [ ./profiles/${profile}/configuration.nix ];
-      };
       "framework" = lib.nixosSystem {
         inherit system;
 	        modules = [
