@@ -67,6 +67,7 @@ in
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
         "system-monitor@gnome-shell-extensions.gcampax.github.com"
+        "caffeine@patapon.info"
       ];
     };
   };
