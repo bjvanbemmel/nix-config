@@ -8,6 +8,7 @@
     ../../user/app/mpv/mpv.nix
     ../../user/app/gh/gh.nix
     ../../user/app/git/git.nix
+    ../../user/app/obs/obs.nix
     ../../user/app/ripgrep/ripgrep.nix
     ../../user/app/thunderbird/thunderbird.nix
     ../../user/app/vivaldi/vivaldi.nix

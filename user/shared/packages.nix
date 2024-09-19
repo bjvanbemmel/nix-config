@@ -10,6 +10,5 @@
     bruno
     libreoffice-qt
     gimp
-    obs-studio
   ];
 }
