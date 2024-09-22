@@ -10,6 +10,7 @@
     enable = true;
     shellAliases = {
       v = "nvim";
+      python = "nix run nixpkgs#python3 --";
     };
 
     autosuggestion.enable =  true;

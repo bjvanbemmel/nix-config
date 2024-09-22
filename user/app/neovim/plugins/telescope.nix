@@ -18,7 +18,7 @@
         action = "current_buffer_fuzzy_find";
       };
       "gtr" = {
-        action = "lsp_references";
+        action = "lsp_incoming_calls";
       };
     };
   };
