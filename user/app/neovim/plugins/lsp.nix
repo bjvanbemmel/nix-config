@@ -19,6 +19,7 @@
       cssls.enable = true; # CSS
       sqls.enable = true; # SQL
       pyright.enable = true; # Python
+      bashls.enable = true; # Bash
     };
   };
 }
