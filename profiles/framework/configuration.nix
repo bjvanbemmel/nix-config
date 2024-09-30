@@ -63,6 +63,7 @@
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  security.pam.services.gdm-password.enableGnomeKeyring = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;

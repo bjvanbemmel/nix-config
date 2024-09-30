@@ -9,6 +9,7 @@
       core = {
         editor = "nvim";
       };
+      credential.helper = "store";
     };
   };
 }
