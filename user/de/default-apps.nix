@@ -4,6 +4,7 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
+      "application/pdf" = "org.gnome.Evince.desktop";
       "audio/vorbis" = "org.gnome.Rhythmbox3.desktop";
       "audio/x-vorbis" = "org.gnome.Rhythmbox3.desktop";
       "audio/x-scpls" = "org.gnome.Rhythmbox3.desktop";
