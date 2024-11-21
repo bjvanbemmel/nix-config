@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../user/app/brave/brave.nix
     ../../user/app/chromium/chromium.nix
     ../../user/app/firefox/firefox.nix
     ../../user/app/neovim/neovim.nix
@@ -11,7 +12,6 @@
     ../../user/app/obs/obs.nix
     ../../user/app/ripgrep/ripgrep.nix
     ../../user/app/thunderbird/thunderbird.nix
-    ../../user/app/vivaldi/vivaldi.nix
     ../../user/de/gnome.nix
     ../../user/shared/packages.nix
     ../../user/shell/zsh/zsh.nix

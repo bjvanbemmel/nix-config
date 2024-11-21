@@ -9,13 +9,13 @@
           "--enable-features=VaapiVideoDecodeLinuxGL"
           "--ignore-gpu-blocklist"
           "--enable-zero-copy"
-          "--gtk-version=4"
         ];
-        enableWideVine = true;
       });
     extensions = [
+      "ajopnjidmegmdimjlfnijceegpefgped" # BetterTTV
+      "ammjkodgmmoknidbanneddgankgfejfh" # 7TV
+      "fadndhdgpmmaapbmfcknlfgcflmmmieb" # FrankerFaceZ
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
-      "lkhiljgmbeecmljiogckofcalncmfnfo" # Migaku
     ];
   };
 }
