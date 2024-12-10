@@ -84,7 +84,7 @@
   users.users.beauv = {
     isNormalUser = true;
     description = "Beau Jean van Bemmel";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
   };
 
   # Set ZSH as default shell
