@@ -3,7 +3,8 @@
 {
   i18n = {
     inputMethod = {
-      enabled = "ibus";
+      enable = true;
+      type = "ibus";
       ibus.engines = with pkgs.ibus-engines; [
         anthy
       ];
@@ -23,6 +24,6 @@
   };
 
   fonts.packages = with pkgs; [
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
   ];
 }

@@ -2,6 +2,6 @@
 
 {
   environment.gnome.excludePackages = with pkgs; [
-    gnome.gnome-music
+    gnome-music
   ];
 }

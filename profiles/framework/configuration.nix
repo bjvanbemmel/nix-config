@@ -101,7 +101,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     xsel
-    gnome.gnome-tweaks
+    gnome-tweaks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
