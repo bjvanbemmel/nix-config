@@ -6,11 +6,11 @@
     servers = {
       gopls.enable = true; # Golang
       nixd.enable = true; # Nix
-      lua-ls.enable = true; # Lua
+      lua_ls.enable = true; # Lua
       omnisharp.enable = true; # C#
-      docker-compose-language-service.enable = true; # Docker compose files
+      docker_compose_language_service.enable = true; # Docker compose files
       dockerls.enable = true; # Dockerfile
-      tsserver.enable = true; # TypeScript (and JavaScript)
+      ts_ls.enable = true; # TypeScript (and JavaScript)
       volar.enable = true; # Vue
       tailwindcss.enable = true; # Tailwind
       jsonls.enable = true; # JSON

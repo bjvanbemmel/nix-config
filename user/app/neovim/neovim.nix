@@ -10,6 +10,7 @@
     ./plugins/lualine.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
+    ./plugins/web-devicons.nix
     ./keybinds.nix
   ];
 
