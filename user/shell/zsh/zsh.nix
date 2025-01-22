@@ -10,6 +10,7 @@
     enable = true;
     shellAliases = {
       v = "nvim";
+      nd = "nix develop -c $SHELL";
     };
 
     autosuggestion.enable =  true;
