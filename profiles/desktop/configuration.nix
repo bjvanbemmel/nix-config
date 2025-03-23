@@ -102,6 +102,8 @@
   environment.systemPackages = with pkgs; [
     xsel
     gnome-tweaks
+    wineWowPackages.stable
+    winetricks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

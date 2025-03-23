@@ -36,7 +36,10 @@
   home.packages = with pkgs; [
     gamemode
     xivlauncher
+    prismlauncher
     foliate
+    heroic
+    aseprite
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
