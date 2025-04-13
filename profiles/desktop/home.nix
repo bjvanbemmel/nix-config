@@ -34,12 +34,17 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    hunspell
+    hunspellDicts.nl_NL
+    hunspellDicts.en_US
     gamemode
     xivlauncher
     prismlauncher
     foliate
     heroic
     aseprite
+    amberol
+    mission-center
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
