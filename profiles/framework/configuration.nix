@@ -26,7 +26,8 @@
   # Fonts
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      pkgs.nerd-fonts._0xproto
+      pkgs.nerd-fonts.droid-sans-mono
       jetbrains-mono
     ];
 
