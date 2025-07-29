@@ -36,6 +36,8 @@
   home.packages = with pkgs; [
     arduino-ide
     foliate
+    prismlauncher
+    gnome-network-displays
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
