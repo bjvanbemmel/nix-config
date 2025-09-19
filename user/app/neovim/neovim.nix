@@ -2,12 +2,14 @@
 
 {
   imports = [
-    ./plugins/lsp.nix
     ./plugins/cmp.nix
     ./plugins/comment.nix
-    ./plugins/oil.nix
+    ./plugins/git-conflict.nix
+    ./plugins/gitgutter.nix
+    ./plugins/lsp.nix
     ./plugins/luasnip.nix
     ./plugins/lualine.nix
+    ./plugins/oil.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/web-devicons.nix
