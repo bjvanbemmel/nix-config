@@ -16,13 +16,16 @@
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware/master";
     };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, nixos-hardware, ... }:
+  outputs = { self, nixpkgs, home-manager, nixvim, nixos-hardware, lanzaboote, ... }:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "";
+    profile = "desktop";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
@@ -38,6 +41,7 @@
         inherit system;
         modules = [
           ./profiles/${profile}/configuration.nix
+          lanzaboote.nixosModules.lanzaboote
         ];
       };
     };

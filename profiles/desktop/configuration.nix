@@ -105,6 +105,7 @@
     gnome-tweaks
     wineWowPackages.stable
     winetricks
+    pkgs.sbctl
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

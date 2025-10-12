@@ -38,6 +38,7 @@
     foliate
     prismlauncher
     gnome-network-displays
+    spotify
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

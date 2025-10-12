@@ -4,7 +4,7 @@ let
  wallpaper = fetchTree {
    type = "file";
    url = "https://wallpaper.bjvanbemmel.nl";
-   narHash = "sha256-3wtS1YNIXmRRlP4wYCQT2JvIxLxkBVeE/cXhBZnT2DU=";
+   narHash = "sha256-wrgoxyUhrxkX3Vz9IBTMkatYnwbNuUPGkX/9aVqpxpc=";
  };
 in
 {
