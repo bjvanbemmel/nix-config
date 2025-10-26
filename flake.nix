@@ -25,7 +25,7 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "desktop";
+    profile = "framework";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
@@ -35,6 +35,7 @@
 	        modules = [
             ./profiles/${profile}/configuration.nix
             nixos-hardware.nixosModules.framework-13-7040-amd
+            lanzaboote.nixosModules.lanzaboote
           ];
       };
       "desktop" = lib.nixosSystem {
