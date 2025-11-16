@@ -5,10 +5,10 @@
     ../../user/app/brave/brave.nix
     ../../user/app/chromium/chromium.nix
     ../../user/app/firefox/firefox.nix
-    ../../user/app/neovim/neovim.nix
-    ../../user/app/mpv/mpv.nix
     ../../user/app/gh/gh.nix
     ../../user/app/git/git.nix
+    ../../user/app/mpv/mpv.nix
+    ../../user/app/neovim/neovim.nix
     ../../user/app/obs/obs.nix
     ../../user/app/ripgrep/ripgrep.nix
     ../../user/app/thunderbird/thunderbird.nix
@@ -39,6 +39,11 @@
     prismlauncher
     gnome-network-displays
     spotify
+    beekeeper-studio
+  ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "beekeeper-studio-5.1.5"
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -11,6 +11,9 @@
       "<leader>td" = {
         action = "diagnostics";
       };
+      "<leader>ti" = {
+        action = "lsp_implementations";
+      };
       "<leader>tg" = {
         action = "live_grep";
       };
