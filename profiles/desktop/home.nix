@@ -46,6 +46,11 @@
     amberol
     mission-center
     spotify
+    beekeeper-studio
+  ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "beekeeper-studio-5.1.5"
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

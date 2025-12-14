@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../system/app/adb/adb.nix
       ../../system/app/steam/steam.nix
       ../../system/boot/boot.nix
       ../../system/environment/excluded-apps.nix
@@ -85,7 +86,7 @@
   users.users.beauv = {
     isNormalUser = true;
     description = "Beau Jean van Bemmel";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
   };
 
   # Set ZSH as default shell
@@ -123,8 +124,8 @@
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [
-    8833
-    8844
+    8800
+    8811
   ];
   networking.firewall.allowedUDPPorts = [
     51820

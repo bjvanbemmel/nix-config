@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../system/app/adb/adb.nix
       ../../system/app/steam/steam.nix
       ../../system/boot/boot.nix
       ../../system/environment/excluded-apps.nix
@@ -86,7 +87,7 @@
   users.users.beauv = {
     isNormalUser = true;
     description = "Beau Jean van Bemmel";
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "adbusers" ];
   };
 
   # Set ZSH as default shell
