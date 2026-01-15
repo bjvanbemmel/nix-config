@@ -3,13 +3,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "bjvanbemmel";
-    userEmail = "beauvanbemmel@live.nl";
-    extraConfig = {
-      core = {
-        editor = "nvim";
-      };
+    settings = {
+      core.editor = "nvim";
       credential.helper = "store";
+      user.name = "bjvanbemmel";
+      user.email = "beauvanbemmel@live.nl";
     };
   };
 }

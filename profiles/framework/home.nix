@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../user/app/anki/anki.nix
     ../../user/app/brave/brave.nix
     ../../user/app/chromium/chromium.nix
     ../../user/app/firefox/firefox.nix
@@ -43,7 +44,7 @@
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
-    "beekeeper-studio-5.1.5"
+    "beekeeper-studio-5.3.4"
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

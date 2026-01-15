@@ -50,7 +50,7 @@
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
-    "beekeeper-studio-5.1.5"
+    "beekeeper-studio-5.3.4"
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
