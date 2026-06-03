@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../system/app/adb/adb.nix
       ../../system/app/steam/steam.nix
       ../../system/boot/boot.nix
       ../../system/environment/excluded-apps.nix
@@ -44,10 +43,10 @@
   time.timeZone = "Europe/Amsterdam";
 
   # Enable the GNOME Desktop Environment.
+  services.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
     excludePackages = with pkgs; [
       xterm
     ];
@@ -64,7 +63,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   security.pam.services.gdm-password.enableGnomeKeyring = true;
   services.pipewire = {
@@ -103,6 +102,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    android-tools
     xsel
     gnome-tweaks
   ];

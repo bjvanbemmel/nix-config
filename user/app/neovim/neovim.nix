@@ -4,7 +4,6 @@
   imports = [
     ./plugins/cmp.nix
     ./plugins/comment.nix
-    ./plugins/git-conflict.nix
     ./plugins/gitgutter.nix
     ./plugins/lsp.nix
     ./plugins/luasnip.nix
