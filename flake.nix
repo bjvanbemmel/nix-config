@@ -25,7 +25,7 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "bjvanbemmel";
+    profile = "framework";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {

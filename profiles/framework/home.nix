@@ -12,6 +12,7 @@
     ../../user/app/neovim/neovim.nix
     ../../user/app/obs/obs.nix
     ../../user/app/ripgrep/ripgrep.nix
+    ../../user/app/ssh/ssh.nix
     ../../user/app/thunderbird/thunderbird.nix
     ../../user/de/gnome.nix
     ../../user/shell/zsh/zsh.nix
