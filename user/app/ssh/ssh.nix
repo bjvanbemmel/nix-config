@@ -15,7 +15,7 @@
         ServerAliveCountMax = 3;
       };
 
-      "github" = {
+      "github.com" = {
         HostName = "github.com";
         User = "git";
         IdentityFile = "~/.ssh/github";
