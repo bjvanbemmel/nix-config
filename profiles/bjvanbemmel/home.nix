@@ -5,6 +5,7 @@
     ../../user/app/git/git.nix
     ../../user/app/neovim/neovim.nix
     ../../user/app/ripgrep/ripgrep.nix
+    ../../user/app/ssh/ssh.nix
     ../../user/shell/zsh/zsh.nix
   ];
 
