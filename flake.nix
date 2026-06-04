@@ -25,18 +25,18 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "framework";
+    profile = "bjvanbemmel";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
     nixosConfigurations = {
-      "bjvanbemmel.nl" = lib.nixosSystem {
+      "bjvanbemmel" = lib.nixosSystem {
         inherit system;
 	        modules = [
             ./profiles/${profile}/configuration.nix
           ];
       };
-      "storage.bjvanbemmel.nl" = lib.nixosSystem {
+      "storage" = lib.nixosSystem {
         inherit system;
 	        modules = [
             ./profiles/${profile}/configuration.nix
