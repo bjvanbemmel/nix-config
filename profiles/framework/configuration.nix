@@ -105,6 +105,7 @@
     android-tools
     xsel
     gnome-tweaks
+    wireguard-tools
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
