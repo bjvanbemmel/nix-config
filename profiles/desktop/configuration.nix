@@ -106,7 +106,8 @@
     gnome-tweaks
     wineWowPackages.stable
     winetricks
-    pkgs.sbctl
+    sbctl
+    wireguard-tools
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
