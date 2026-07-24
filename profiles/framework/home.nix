@@ -5,6 +5,7 @@
     ../../user/app/anki/anki.nix
     ../../user/app/brave/brave.nix
     ../../user/app/chromium/chromium.nix
+    ../../user/app/claude/claude.nix
     ../../user/app/firefox/firefox.nix
     ../../user/app/gh/gh.nix
     ../../user/app/git/git.nix
@@ -42,6 +43,8 @@
     gnome-network-displays
     spotify
     beekeeper-studio
+    poppler-utils
+    nodejs # For Obsidian MCP - npx
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
