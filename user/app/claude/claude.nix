@@ -42,6 +42,6 @@
 
   # Deploy math-router workflow file
   home.file.".claude/workflows/math-router.js" = {
-    source = /home/beauv/Documents/obsidian/Minerva/.claude/workflows/math-router.js;
+    source = ./math-router.js;
   };
 }
