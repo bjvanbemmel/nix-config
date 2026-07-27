@@ -4,6 +4,7 @@
   programs.nixvim.extraPlugins = [ pkgs.vimPlugins.cmp-ai ];
 
   programs.nixvim.extraConfigLua = ''
+    vim.env.HF_API_KEY = "unused"
     require('cmp_ai.config'):setup({
       max_lines = 1000,
       provider = 'Ollama',
