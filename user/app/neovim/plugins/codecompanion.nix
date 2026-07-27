@@ -19,7 +19,7 @@
                 url = "http://10.100.0.1:11434",
               },
               schema = {
-                model = { default = "qwen2.5-coder:7b" },
+                model = { default = "qwen2.5:7b" },
                 num_ctx = { default = 16384 },
               },
             })
@@ -79,7 +79,7 @@
                 end,
               },
               schema = {
-                model = { default = "qwen2.5-coder:7b" },
+                model = { default = "qwen2.5:7b" },
                 num_ctx = { default = 16384 },
               },
             })
@@ -231,12 +231,4 @@
     vim.keymap.set({ "n", "v" }, "<leader>o", cc_inline_prompt, { desc = "CodeCompanion inline prompt" })
   '';
 
-  programs.nixvim.keymaps = [
-    {
-      key = "<leader>cc";
-      mode = [ "n" "v" ];
-      action = "<cmd>CodeCompanionActions<CR>";
-      options.desc = "CodeCompanion actions";
-    }
-  ];
 }
