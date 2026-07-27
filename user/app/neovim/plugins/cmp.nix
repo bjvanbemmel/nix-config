@@ -10,7 +10,6 @@
 
       sources = [
         { name = "nvim_lsp"; }
-        { name = "ollama"; }
         { name = "codecompanion"; }
         { name = "path"; }
         { name = "buffer"; }
