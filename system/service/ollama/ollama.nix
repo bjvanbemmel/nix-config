@@ -6,8 +6,7 @@
     package = pkgs.ollama;
     host = "10.100.0.1"; # Only listen on the WireGuard interface.
     loadModels = [
-      "mistral-nemo:12b"
-      "qwen2.5-coder:1.5b"
+      "qwen2.5-coder:7b"
     ];
     user = "ollama";
     group = "users";

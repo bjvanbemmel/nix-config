@@ -19,7 +19,7 @@
                 url = "http://10.100.0.1:11434",
               },
               schema = {
-                model = { default = "mistral-nemo:12b" },
+                model = { default = "qwen2.5-coder:7b" },
                 num_ctx = { default = 16384 },
               },
             })
@@ -79,7 +79,7 @@
                 end,
               },
               schema = {
-                model = { default = "mistral-nemo:12b" },
+                model = { default = "qwen2.5-coder:7b" },
                 num_ctx = { default = 16384 },
               },
             })
