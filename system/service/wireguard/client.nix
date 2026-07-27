@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+
+let
+  # Set after first deploy on bjvanbemmel: cat /etc/wireguard/wg0.pub
+  bjvanbelmmPubKey = null;
+in
 
 {
   system.activationScripts.wireguard-keygen = ''
@@ -13,11 +18,9 @@
   networking.wireguard.interfaces.wg0 = {
     ips = [ "10.100.0.2/32" ];
     privateKeyFile = "/etc/wireguard/wg0.key";
-
-    peers = [
+    peers = lib.optionals (bjvanbelmmPubKey != null) [
       {
-        # bjvanbemmel — after first deploy, get with: cat /etc/wireguard/wg0.pub (on bjvanbemmel)
-        publicKey = "<BJVANBEMMEL_WG_PUBKEY>";
+        publicKey = bjvanbelmmPubKey;
         endpoint = "bjvanbemmel.nl:51820";
         allowedIPs = [ "10.100.0.1/32" ];
         persistentKeepalive = 25;

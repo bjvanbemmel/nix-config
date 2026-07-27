@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+
+let
+  # Set after first deploy on framework: cat /etc/wireguard/wg0.pub
+  frameworkPubKey = null;
+in
 
 {
   system.activationScripts.wireguard-keygen = ''
@@ -14,18 +19,14 @@
     ips = [ "10.100.0.1/24" ];
     listenPort = 51820;
     privateKeyFile = "/etc/wireguard/wg0.key";
-
-    peers = [
+    peers = lib.optionals (frameworkPubKey != null) [
       {
-        # framework — after first deploy, get with: cat /etc/wireguard/wg0.pub (on framework)
-        publicKey = "<FRAMEWORK_WG_PUBKEY>";
+        publicKey = frameworkPubKey;
         allowedIPs = [ "10.100.0.2/32" ];
       }
     ];
   };
 
   networking.firewall.allowedUDPPorts = [ 51820 ];
-
-  # Ollama is only reachable from WireGuard peers
   networking.firewall.interfaces.wg0.allowedTCPPorts = [ 11434 ];
 }
