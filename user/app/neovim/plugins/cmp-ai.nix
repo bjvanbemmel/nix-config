@@ -8,10 +8,10 @@
       max_lines = 1000,
       provider = 'Ollama',
       provider_options = {
-        model = 'mistral:7b',
+        model = 'qwen2.5-coder:1.5b',
         base_url = 'http://10.100.0.1:11434',
       },
-      run_on_every_keystroke = false,
+      run_on_every_keystroke = true,
     })
   '';
 }
