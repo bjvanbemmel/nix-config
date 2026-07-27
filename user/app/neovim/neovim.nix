@@ -3,7 +3,7 @@
 {
   imports = [
     ./plugins/cmp.nix
-    ./plugins/copilot.nix
+    ./plugins/ollama-cmp.nix
     ./plugins/codecompanion.nix
     ./plugins/render-markdown.nix
     ./plugins/comment.nix
