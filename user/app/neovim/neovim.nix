@@ -3,6 +3,7 @@
 {
   imports = [
     ./plugins/cmp.nix
+    ./plugins/cmp-ai.nix
     ./plugins/codecompanion.nix
     ./plugins/render-markdown.nix
     ./plugins/comment.nix

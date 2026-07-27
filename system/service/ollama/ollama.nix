@@ -7,6 +7,7 @@
     host = "10.100.0.1"; # Only listen on the WireGuard interface.
     loadModels = [
       "mistral-nemo:12b"
+      "mistral:7b"
     ];
     user = "ollama";
     group = "users";
