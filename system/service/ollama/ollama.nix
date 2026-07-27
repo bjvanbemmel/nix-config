@@ -20,9 +20,9 @@
     after = [ "wireguard-wg0.service" ];
     requires = [ "wireguard-wg0.service" ];
     serviceConfig = {
-      CPUQuota = "400%";   # cap at 4 of 8 cores, leaving headroom for the OS
-      MemoryHigh = "14G";  # soft ceiling — throttles instead of killing
-      MemoryMax = "20G";   # hard ceiling as a last-resort system safety net
+      CPUQuota = "600%";   # cap at 6 of 8 cores (75%)
+      MemoryHigh = "18G";  # soft ceiling — 75% of 24 GB
+      MemoryMax = "21G";   # hard ceiling as a last-resort system safety net
     };
   };
 }
