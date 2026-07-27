@@ -20,7 +20,7 @@
               },
               schema = {
                 model = { default = "qwen2.5-coder:14b" },
-                num_ctx = { default = 32768 },
+                num_ctx = { default = 16384 },
               },
             })
           end
@@ -108,15 +108,12 @@
         action_palette.provider = "telescope";
         diff.enabled = true;
         inline.layout = "vertical";
-        chat = {
-          render_markdown = true;
-          window = {
-            layout = "float";
-            relative = "editor";
-            border = "rounded";
-            height = 0.8;
-            width = 0.45;
-          };
+        chat.window = {
+          layout = "float";
+          relative = "editor";
+          border = "rounded";
+          height = 0.8;
+          width = 0.45;
         };
       };
     };

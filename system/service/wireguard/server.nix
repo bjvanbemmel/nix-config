@@ -2,7 +2,7 @@
 
 let
   # Set after first deploy on framework: cat /etc/wireguard/wg0.pub
-  frameworkPubKey = null;
+  frameworkPubKey = "+DPo4tjtDdt3QER5WDX3wymUlTsgnEZG5ISMYFWhVy0=";
 in
 
 {

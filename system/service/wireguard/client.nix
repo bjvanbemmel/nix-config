@@ -2,7 +2,7 @@
 
 let
   # Set after first deploy on bjvanbemmel: cat /etc/wireguard/wg0.pub
-  bjvanbelmmPubKey = null;
+  bjvanbelmmPubKey = "nAt/8asnGogcu2ygJR/7QRP7jJKFK2UzoI+srm0frXY=";
 in
 
 {

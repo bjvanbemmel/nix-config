@@ -19,8 +19,9 @@
     after = [ "wireguard-wg0.service" ];
     requires = [ "wireguard-wg0.service" ];
     serviceConfig = {
-      CPUQuota = "400%";  # cap at 4 of 8 cores, leaving headroom for the OS
-      MemoryMax = "14G";  # well above model size (~7 GB), hard ceiling
+      CPUQuota = "400%";   # cap at 4 of 8 cores, leaving headroom for the OS
+      MemoryHigh = "14G";  # soft ceiling — throttles instead of killing
+      MemoryMax = "20G";   # hard ceiling as a last-resort system safety net
     };
   };
 }
