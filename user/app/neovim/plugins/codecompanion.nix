@@ -19,8 +19,8 @@
                 url = "http://10.100.0.1:11434",
               },
               schema = {
-                model = { default = "qwen2.5-coder:7b" },
-                num_ctx = { default = 16384 },
+                model = { default = "qwen2.5-coder:14b" },
+                num_ctx = { default = 32768 },
               },
             })
           end
@@ -79,7 +79,7 @@
                 end,
               },
               schema = {
-                model = { default = "qwen2.5-coder:7b" },
+                model = { default = "qwen2.5-coder:14b" },
                 num_ctx = { default = 16384 },
               },
             })
@@ -106,18 +106,17 @@
 
       display = {
         action_palette.provider = "telescope";
-        # Built-in diff (no external plugin needed). The inline assistant shows
-        # this in-buffer before applying, gated on accept/reject.
         diff.enabled = true;
-        # Only relevant when the model picks placement = "new": open the new
-        # buffer in a vertical split.
         inline.layout = "vertical";
-        chat.window = {
-          layout = "float";
-          relative = "editor";
-          border = "rounded";
-          height = 0.8;
-          width = 0.45;
+        chat = {
+          render_markdown = true;
+          window = {
+            layout = "float";
+            relative = "editor";
+            border = "rounded";
+            height = 0.8;
+            width = 0.45;
+          };
         };
       };
     };
