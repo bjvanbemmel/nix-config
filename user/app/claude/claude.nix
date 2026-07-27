@@ -12,7 +12,7 @@
         command = "npx";
         args = [ "-y" "zubeid-youtube-mcp-server" ];
         env = {
-          YOUTUBE_API_KEY = "AIzaSyBoUH1J9PxZgEupMmqKUiBDKQdLFff4l8k"; # Get from https://console.cloud.google.com/apis/credentials
+          YOUTUBE_API_KEY = ""; # Get from https://console.cloud.google.com/apis/credentials
         };
       };
       wolfram = {
