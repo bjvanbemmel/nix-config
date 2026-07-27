@@ -3,16 +3,15 @@
 {
   services.ollama = {
     enable = true;
-    # Only listen on the WireGuard interface — firewall restricts access further
-    host = "10.100.0.1";
+    package = pkgs.ollama;
+    host = "10.100.0.1"; # Only listen on the WireGuard interface.
     loadModels = [
-      "qwen2.5-coder:7b"
+      "qwen2.5-coder:14b"
     ];
     user = "ollama";
     group = "users";
   };
 
-  # wg0 must be up before Ollama starts — it binds to the WireGuard IP
   systemd.services.ollama = {
     after = [ "wireguard-wg0.service" ];
     requires = [ "wireguard-wg0.service" ];
