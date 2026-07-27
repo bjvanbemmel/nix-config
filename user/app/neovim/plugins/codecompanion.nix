@@ -15,6 +15,9 @@
         ollamaChat.__raw = ''
           function()
             return require("codecompanion.adapters").extend("ollama", {
+              env = {
+                url = "http://10.100.0.1:11434",
+              },
               schema = {
                 model = { default = "qwen2.5-coder:7b" },
                 num_ctx = { default = 16384 },
@@ -31,6 +34,9 @@
         ollamaInline.__raw = ''
           function()
             return require("codecompanion.adapters").extend("ollama", {
+              env = {
+                url = "http://10.100.0.1:11434",
+              },
               handlers = {
                 -- `form_parameters` output is merged verbatim into the top
                 -- level of the Ollama /api/chat request body, so setting
