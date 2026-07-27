@@ -14,6 +14,7 @@
       ../../system/i18n/i18n.nix
       ../../system/service/avahi/avahi.nix
       ../../system/service/networking/networking.nix
+      ../../system/service/ollama/ollama.nix
       ../../system/virtualisation/docker/docker.nix
     ];
 

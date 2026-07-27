@@ -42,11 +42,11 @@ in
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,close";
     };
-
-   "org/gnome/desktop/background" = {
-     picture-uri = "file://" + wallpaper.outPath;
-     picture-uri-dark = "file://" + wallpaper.outPath;
-   };
+   #
+   # "org/gnome/desktop/background" = {
+   #   picture-uri = "file://" + wallpaper.outPath;
+   #   picture-uri-dark = "file://" + wallpaper.outPath;
+   # };
 
     # Japanese input as well as English (with modifier key)
     "org/gnome/desktop/input-sources" = with lib.hm.gvariant; {
