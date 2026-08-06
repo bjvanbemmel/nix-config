@@ -23,7 +23,7 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    profile = "storage";
+    profile = "framework";
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
