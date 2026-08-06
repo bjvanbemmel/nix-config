@@ -31,6 +31,10 @@
       pkgs.nerd-fonts._0xproto
       pkgs.nerd-fonts.droid-sans-mono
       jetbrains-mono
+      cascadia-code
+      cabin
+      atkinson-hyperlegible-next
+      crimson-pro
     ];
 
     fontconfig = {

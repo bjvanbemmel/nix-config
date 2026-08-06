@@ -16,7 +16,7 @@
           webCorsOrigin = "*";
           webCorsOriginList = [
             "http://localhost"
-            "app://obsidian.mb"
+            "app://obsidian.md"
           ];
         };
       })
