@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/import" =
+    { device = "storage.bjvanbemmel.local:/export";
+      fsType = "nfs4";
+    };
+
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
