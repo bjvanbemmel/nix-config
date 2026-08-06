@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      ../../system/service/openssh/openssh.nix
       ./hardware-configuration.nix
     ];
 
