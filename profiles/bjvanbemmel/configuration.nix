@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      ../../system/service/forgejo/forgejo.nix
       ../../system/service/networking/networking.nix
       ../../system/service/openssh/openssh.nix
       ../../system/virtualisation/docker/docker.nix
@@ -113,6 +114,8 @@
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [
     22
+    80
+    443
     2049
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
