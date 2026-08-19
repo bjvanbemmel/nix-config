@@ -21,6 +21,12 @@
         IdentityFile = "~/.ssh/github";
       };
 
+      "git.bjvanbemmel.nl" = {
+        HostName = "git.bjvanbemmel.nl";
+        User = "git";
+        IdentityFile = "~/.ssh/git.bjvanbemmel";
+      };
+
       "storage" = {
         HostName = "storage.bjvanbemmel.nl";
         User = "beauv";
