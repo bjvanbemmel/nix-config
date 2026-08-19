@@ -13,6 +13,6 @@
 
   security.acme = {
     acceptTerms = true;
-    email = "beau@tb.pro";
+    defaults.email = "beau@tb.pro";
   };
 }

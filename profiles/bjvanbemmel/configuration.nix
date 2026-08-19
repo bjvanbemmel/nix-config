@@ -11,6 +11,7 @@
       ../../system/service/networking/networking.nix
       ../../system/service/nginx/nginx.nix
       ../../system/service/openssh/openssh.nix
+      ../../system/service/uptime/uptime.nix
       ../../system/virtualisation/docker/docker.nix
       ./hardware-configuration.nix
     ];
