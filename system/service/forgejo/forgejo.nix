@@ -39,7 +39,7 @@ in
         SSH_USER = "git";
         SSH_CREATE_AUTHORIZED_KEYS_FILE = false;
       };
-      service.DISABLE_REGISTRATION = false; #TODO: set to true after creating admin
+      service.DISABLE_REGISTRATION = true;
       actions = {
         ENABLED = true;
         DEFAULT_ACTIONS_URL = "github";
