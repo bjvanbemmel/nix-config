@@ -10,6 +10,7 @@
       ../../system/service/forgejo/forgejo.nix
       ../../system/service/networking/networking.nix
       ../../system/service/nginx/nginx.nix
+      ../../system/service/minecraft/minecraft.nix
       ../../system/service/openssh/openssh.nix
       ../../system/service/uptime/uptime.nix
       ../../system/virtualisation/docker/docker.nix
@@ -126,6 +127,7 @@
     80
     443
     2049
+    25565
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
