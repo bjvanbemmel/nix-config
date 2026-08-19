@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ../../system/service/forgejo/forgejo.nix
       ../../system/service/networking/networking.nix
+      ../../system/service/nginx/nginx.nix
       ../../system/service/openssh/openssh.nix
       ../../system/virtualisation/docker/docker.nix
       ./hardware-configuration.nix

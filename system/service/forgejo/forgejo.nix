@@ -7,7 +7,7 @@ in
 {
   services.nginx = {
     enable = true;
-    virtualHosts.${DOMAIN} = {
+    virtualHosts."${DOMAIN}" = {
       forceSSL = true;
       enableACME = true;
       extraConfig = ''
@@ -18,8 +18,6 @@ in
       };
     };
   };
-
-  security.acme.acceptTerms = true;
 
   services.forgejo = {
     enable = true;
