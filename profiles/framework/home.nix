@@ -39,8 +39,7 @@
   home.packages = with pkgs; [
     arduino-ide
     foliate
-    prismlauncher
-    gnome-network-displays
+    atlauncher
     spotify
     beekeeper-studio
     poppler-utils
