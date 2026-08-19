@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   PORT = 3000;
@@ -35,13 +35,34 @@ in
         DOMAIN = "${toString DOMAIN}";
         ROOT_URL = "https://${DOMAIN}/";
         HTTP_PORT = PORT;
-        SSH_PORT = 22;
+        SSH_PORT = lib.head config.services.openssh.ports;
+        SSH_USER = "git";
+        SSH_CREATE_AUTHORIZED_KEYS_FILE = false;
       };
       service.DISABLE_REGISTRATION = false; #TODO: set to true after creating admin
       actions = {
         ENABLED = true;
         DEFAULT_ACTIONS_URL = "github";
       };
+    };
+  };
+
+  services.gitea-actions-runner = {
+    package = pkgs.forgejo-runner;
+    instances.default = {
+      enable = true;
+      name = "prometheus";
+      url = "http://localhost:3000/";
+      settings = {};
+      token = "LKxvLef-6lshZS-taBOVQWWUZCSLa30eA5Bnuht2hfB"; # Use agentix
+      labels = [
+          "ubuntu-latest:docker://golang:1.26.6-alpine"
+          "ubuntu-22.04:docker://golang:1.26.6-alpine"
+          "ubuntu-20.04:docker://golang:1.26.6-alpine"
+          "ubuntu-latest:docker://node:26-alpine"
+          "ubuntu-22.04:docker://node:26-alpine"
+          "ubuntu-20.04:docker://node:26-alpine"
+      ];
     };
   };
 }
