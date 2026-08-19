@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ../../system/service/forgejo/forgejo.nix
+      ../../system/service/jellyfin/jellyfin.nix
       ../../system/service/networking/networking.nix
       ../../system/service/nginx/nginx.nix
       ../../system/service/minecraft/minecraft.nix
