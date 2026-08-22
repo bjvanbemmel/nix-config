@@ -23,7 +23,7 @@
 
       "git.bjvanbemmel.nl" = {
         HostName = "git.bjvanbemmel.nl";
-        User = "git";
+        User = "forgejo";
         IdentityFile = "~/.ssh/git.bjvanbemmel";
       };
 
