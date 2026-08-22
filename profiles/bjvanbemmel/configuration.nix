@@ -87,13 +87,6 @@
     ];
   };
 
-  users.users.git = {
-    isSystemUser = true;
-    group = "git";
-  };
-
-  users.groups.git = {};
-
   environment.shells = with pkgs; [
     zsh
   ];

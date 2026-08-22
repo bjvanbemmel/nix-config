@@ -34,8 +34,7 @@ in
         ROOT_URL = "https://${DOMAIN}/";
         HTTP_PORT = PORT;
         SSH_PORT = lib.head config.services.openssh.ports;
-        SSH_USER = "git";
-        SSH_CREATE_AUTHORIZED_KEYS_FILE = false;
+        SSH_USER = "forgejo";
       };
       service.DISABLE_REGISTRATION = true;
       actions = {
