@@ -128,6 +128,11 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Add wireguard interface for Vault
+  networking.wg-quick.interfaces.vault = {
+    configFile = "/etc/wireguard/vault.conf"; # not managed by Nix, deployed out of band
+  };
+
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.
