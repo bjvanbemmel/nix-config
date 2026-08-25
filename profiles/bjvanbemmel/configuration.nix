@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      ../../system/gc/gc.nix
       ../../system/service/forgejo/forgejo.nix
       ../../system/service/jellyfin/jellyfin.nix
       ../../system/service/networking/networking.nix

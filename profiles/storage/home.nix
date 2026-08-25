@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../system/gc/gc.nix
     ../../user/app/git/git.nix
     ../../user/app/neovim/neovim.nix
     ../../user/app/ripgrep/ripgrep.nix
