@@ -11,6 +11,7 @@
     shellAliases = {
       v = "nvim";
       nd = "nix develop -c $SHELL";
+      wakey = "ssh beauv@192.168.2.54 18:C0:4D:61:94:49";
     };
 
     autosuggestion.enable =  true;
