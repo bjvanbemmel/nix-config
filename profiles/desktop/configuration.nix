@@ -105,7 +105,7 @@
     android-tools
     xsel
     gnome-tweaks
-    wineWowPackages.stable
+    wineWow64Packages.stable
     winetricks
     sbctl
     wireguard-tools
