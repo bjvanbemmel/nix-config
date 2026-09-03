@@ -44,6 +44,7 @@
     beekeeper-studio
     poppler-utils
     nodejs # For Obsidian MCP - npx
+    jetbrains.idea
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
