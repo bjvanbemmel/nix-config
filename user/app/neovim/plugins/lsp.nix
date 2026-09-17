@@ -20,6 +20,7 @@
       sqls.enable = true; # SQL
       pyright.enable = true; # Python
       bashls.enable = true; # Bash
+      asm_lsp.enable = true; # Assembly
     };
   };
 }

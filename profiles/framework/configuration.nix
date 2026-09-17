@@ -111,6 +111,8 @@
     xsel
     gnome-tweaks
     wireguard-tools
+    gcc
+    gdb
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

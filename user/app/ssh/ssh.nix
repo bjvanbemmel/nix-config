@@ -38,6 +38,12 @@
         User = "beauv";
         IdentityFile = "~/.ssh/bjvanbemmel";
       };
+
+      "lamptec" = {
+        HostName = "lamptec.com";
+        User = "beauv";
+        IdentityFile = "~/.ssh/lamptec";
+      };
     };
   };
 }
