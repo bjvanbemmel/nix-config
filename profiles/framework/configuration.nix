@@ -162,4 +162,7 @@
   services.fprintd = {
     enable = true;
   };
+
+  # Use the home-manager ssh-agent only, not GNOME's
+  services.gnome.gcr-ssh-agent.enable = false;
 }
