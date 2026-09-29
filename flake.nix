@@ -17,9 +17,12 @@
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
     };
+    claude-desktop-nix = {
+      url = "github:tomsch/claude-desktop-nix";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, nixos-hardware, lanzaboote, ... }:
+  outputs = { self, nixpkgs, home-manager, nixvim, nixos-hardware, lanzaboote, claude-desktop-nix, ... }:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -59,6 +62,9 @@
     homeConfigurations = {
       "beauv" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = {
+          inherit claude-desktop-nix;
+        };
 	      modules = [
 	        ./profiles/${profile}/home.nix
 	        nixvim.homeModules.nixvim

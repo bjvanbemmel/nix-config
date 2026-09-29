@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, claude-desktop-nix, ... }:
 
 {
   imports = [
@@ -45,6 +45,8 @@
     poppler-utils
     nodejs # For Obsidian MCP - npx
     jetbrains.idea
+    openjdk
+    claude-desktop-nix.packages.x86_64-linux.default
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
