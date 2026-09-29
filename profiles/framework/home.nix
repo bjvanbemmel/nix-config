@@ -46,7 +46,7 @@
     nodejs # For Obsidian MCP - npx
     jetbrains.idea
     openjdk
-    claude-desktop-nix.packages.x86_64-linux.default
+    claude-desktop-nix.packages.x86_64-linux.claude-desktop
   ];
 
   nixpkgs.config.permittedInsecurePackages = [

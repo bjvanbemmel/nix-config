@@ -18,7 +18,7 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
     };
     claude-desktop-nix = {
-      url = "github:tomsch/claude-desktop-nix";
+      url = "github:numtide/llm-agents.nix";
     };
   };
 
