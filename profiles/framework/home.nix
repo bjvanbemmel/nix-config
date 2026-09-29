@@ -46,7 +46,21 @@
     nodejs # For Obsidian MCP - npx
     jetbrains.idea
     openjdk
-    claude-desktop-nix.packages.x86_64-linux.claude-desktop
+    (let
+      claude = claude-desktop-nix.packages.x86_64-linux.claude-desktop;
+      # Electron reports its app_id as com.anthropic.Claude, so the upstream
+      # StartupWMClass=claude-desktop leaves GNOME unable to match the icon.
+      desktopFix = runCommand "claude-desktop-entry" { } ''
+        mkdir -p $out/share/applications
+        sed 's/^StartupWMClass=.*/StartupWMClass=com.anthropic.Claude/' \
+          ${claude}/share/applications/claude-desktop.desktop \
+          > $out/share/applications/claude-desktop.desktop
+        ln -s ${claude}/share/icons $out/share/icons
+      '';
+    in symlinkJoin {
+      name = "claude-desktop";
+      paths = [ desktopFix claude ];
+    })
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
