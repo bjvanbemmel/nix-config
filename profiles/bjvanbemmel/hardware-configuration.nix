@@ -23,6 +23,12 @@
       fsType = "nfs4";
     };
 
+  fileSystems."/vault" =
+    { device = "vault.local:/export";
+      fsType = "nfs4";
+      options = [ "nofail" "soft" "timeo=30" "retrans=2" "_netdev" ];
+    };
+
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
