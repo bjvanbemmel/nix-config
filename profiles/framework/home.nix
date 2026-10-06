@@ -13,6 +13,7 @@
     ../../user/app/neovim/neovim.nix
     ../../user/app/obs/obs.nix
     ../../user/app/ripgrep/ripgrep.nix
+    ../../user/app/spotify/spotify.nix
     ../../user/app/ssh/ssh.nix
     ../../user/app/thunderbird/thunderbird.nix
     ../../user/de/gnome.nix
@@ -40,7 +41,6 @@
     arduino-ide
     foliate
     atlauncher
-    spotify
     beekeeper-studio
     poppler-utils
     nodejs # For Obsidian MCP - npx

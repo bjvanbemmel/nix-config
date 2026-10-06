@@ -11,6 +11,7 @@
     ../../user/app/git/git.nix
     ../../user/app/obs/obs.nix
     ../../user/app/ripgrep/ripgrep.nix
+    ../../user/app/spotify/spotify.nix
     ../../user/app/ssh/ssh.nix
     ../../user/app/thunderbird/thunderbird.nix
     ../../user/de/gnome.nix
@@ -46,7 +47,6 @@
     aseprite
     amberol
     mission-center
-    spotify
     beekeeper-studio
   ];
 
