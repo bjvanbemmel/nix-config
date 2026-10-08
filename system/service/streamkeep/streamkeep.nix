@@ -12,8 +12,8 @@ let
 
     src = pkgs.fetchgit {
       url = "https://git.bjvanbemmel.nl/bjvanbemmel/streamkeep";
-      rev = "ea6a77c34fd14a19be3b92eb3ede4d1aa5611d2a";
-      hash = "sha256-eXibtyELphvXbamd4vfCyCDCN83rW74FAMOivqhOiFg=";
+      rev = "9257c9356c0452c9314305cbc3b79db9373a7091";
+      hash = "sha256-3gKDXw6SUmTt6SkkAfd7VEAvVh16IkolE5QaPdBvtL4=";
     };
 
     vendorHash = null;
