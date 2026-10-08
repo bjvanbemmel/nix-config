@@ -35,6 +35,7 @@
         inherit system;
 	        modules = [
             ./profiles/${profile}/configuration.nix
+            ./system/service/streamkeep/streamkeep.nix
           ];
       };
       "storage" = lib.nixosSystem {
