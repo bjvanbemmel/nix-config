@@ -36,6 +36,7 @@
 	        modules = [
             ./profiles/${profile}/configuration.nix
             ./system/service/streamkeep/streamkeep.nix
+            ./system/service/wakey/wakey.nix
           ];
       };
       "storage" = lib.nixosSystem {
