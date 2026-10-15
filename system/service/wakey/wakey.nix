@@ -126,5 +126,14 @@ in
     locations."/" = {
       proxyPass = "http://127.0.0.1:3003";
     };
+    # MCP over streamable HTTP: no buffering of the event stream, and no access log because the key can sit in the path.
+    locations."/mcp" = {
+      proxyPass = "http://127.0.0.1:3003";
+      extraConfig = ''
+        proxy_buffering off;
+        proxy_read_timeout 1h;
+        access_log off;
+      '';
+    };
   };
 }
