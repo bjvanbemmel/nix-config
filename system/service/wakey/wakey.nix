@@ -11,8 +11,8 @@ let
 
     src = pkgs.fetchgit {
       url = "https://git.bjvanbemmel.nl/bjvanbemmel/wakey";
-      rev = "20c8eae60c17e9ff7b09bae703ff03268dccfa71";
-      hash = "sha256-mKDJfNrApqrgQSYvESLeCfP+OtpzYj/T1XcB3RZf24I=";
+      rev = "38d0d55bd86c466dd2ae40d71ad656d4b0b979bf";
+      hash = "sha256-L8o1OeXLiYJ6Mqa407LuockfckvQ1a7pZWU8OeMw6JQ=";
     };
 
     # The Go module lives in backend/. cgo is on by default (go-sqlite3); migrations, the OpenAPI spec and
@@ -20,12 +20,6 @@ let
     modRoot = "backend";
     subPackages = [ "cmd/wakeyd" "cmd/wakey-mcp" "cmd/wakey-tui" ];
     vendorHash = "sha256-ebyw0b5pBy2CE4mfGPHgXS5hJVz+PvJB2lgsuhi2dAY=";
-
-    # This commit's go.mod demands go 1.26.8; nixpkgs 26.05 may carry an older 1.26.x. Drop once a later
-    # commit (go 1.26.0) is pinned above.
-    postPatch = ''
-      sed -i 's/^go 1\.26\.8$/go 1.26.0/' backend/go.mod
-    '';
   };
 
   listen = "127.0.0.1:3003";
