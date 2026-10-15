@@ -8,12 +8,16 @@
   imports =
     [ # Include the results of the hardware scan.
       ../../system/gc/gc.nix
+      ../../system/service/bazarr/bazarr.nix
       ../../system/service/forgejo/forgejo.nix
       ../../system/service/jellyfin/jellyfin.nix
       ../../system/service/networking/networking.nix
       ../../system/service/nginx/nginx.nix
       ../../system/service/minecraft/minecraft.nix
       ../../system/service/openssh/openssh.nix
+      ../../system/service/radarr/radarr.nix
+      ../../system/service/seerr/seerr.nix
+      ../../system/service/sonarr/sonarr.nix
       ../../system/service/uptime/uptime.nix
       ../../system/virtualisation/docker/docker.nix
       ./hardware-configuration.nix
@@ -93,6 +97,12 @@
   ];
   users.defaultUserShell =  pkgs.zsh;
   programs.zsh.enable = true;
+
+  users.groups.media.gid = 420;
+  users.users.radarr.extraGroups = [ "media" ];
+  users.users.sonarr.extraGroups = [ "media" ];
+  users.users.bazarr.extraGroups = [ "media" ];
+  users.users.jellyfin.extraGroups = [ "media" ];
 
   # programs.firefox.enable = true;
 
