@@ -105,6 +105,21 @@ in
     };
   };
 
+  # Lets beauv start the MCP server as the service user without a password prompt, so Claude can run it over ssh
+  # (ssh beauv@bjvanbemmel.nl wakey-mcp). Only this one binary, only as the wakey user.
+  security.sudo.extraRules = [
+    {
+      users = [ "beauv" ];
+      runAs = "wakey";
+      commands = [
+        {
+          command = "${wakey}/bin/wakey-mcp";
+          options = [ "NOPASSWD" "SETENV" ];
+        }
+      ];
+    }
+  ];
+
   environment.systemPackages = [
     (tool "wakey-admin" "wakeyd")
     (tool "wakey-tui" "wakey-tui")
