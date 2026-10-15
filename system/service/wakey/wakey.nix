@@ -11,8 +11,8 @@ let
 
     src = pkgs.fetchgit {
       url = "https://git.bjvanbemmel.nl/bjvanbemmel/wakey";
-      rev = "5dc8166cd1aca6fe2b618f924316bf33410fa73a";
-      hash = "sha256-u+YcosFdGBfsA9fmPemn08ApXK0RXPwiQJoQ3xa3t0U=";
+      rev = "08d8056c7d504997176c4d8233a51cec16b155d5";
+      hash = "sha256-BO7PMGTp6ldpInyOZHWBGmVqVDc9J+oVohOPf9GSqWw=";
     };
 
     # The Go module lives in backend/. cgo is on by default (go-sqlite3); migrations, the OpenAPI spec and
@@ -125,10 +125,13 @@ in
     enableACME = true;
     locations."/" = {
       proxyPass = "http://127.0.0.1:3003";
+      # Sets X-Real-IP / X-Forwarded-For: wakeyd rate limits POST /v1/register per caller address.
+      recommendedProxySettings = true;
     };
     # MCP over streamable HTTP: no buffering of the event stream, and no access log because the key can sit in the path.
     locations."/mcp" = {
       proxyPass = "http://127.0.0.1:3003";
+      recommendedProxySettings = true;
       extraConfig = ''
         proxy_buffering off;
         proxy_read_timeout 1h;
