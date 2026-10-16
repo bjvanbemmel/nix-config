@@ -11,8 +11,8 @@ let
 
     src = pkgs.fetchgit {
       url = "https://git.bjvanbemmel.nl/bjvanbemmel/wakey";
-      rev = "08d8056c7d504997176c4d8233a51cec16b155d5";
-      hash = "sha256-BO7PMGTp6ldpInyOZHWBGmVqVDc9J+oVohOPf9GSqWw=";
+      rev = "c6f3dfbb7de397ccd375269f87f5db0fc380815e";
+      hash = "sha256-DakL8aPZu42KYHUOz+yELmf2BhVRA/EK7WzLoEBMSD4=";
     };
 
     # The Go module lives in backend/. cgo is on by default (go-sqlite3); migrations, the OpenAPI spec and
