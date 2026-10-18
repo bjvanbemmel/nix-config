@@ -15,8 +15,8 @@ let
 
     src = pkgs.fetchgit {
       url = "https://git.bjvanbemmel.nl/bjvanbemmel/Housey";
-      rev = "d9b91b5063d40baf74bb65af4cd1c0e7afe9136b";
-      hash = "sha256-zQgWK34ogdFBDAkIa+tMpPt5SJrnBprSxpEG8a4hKaw=";
+      rev = "4a35bbcc8d715769df4e6df05f8b14688e7aa174";
+      hash = "sha256-mNZRQrLLUlSsAe50VSzj+KeT30Bf9EyP7Ve7pWXap1s=";
     };
 
     # The Go module lives in backend/. cgo is on by default (go-sqlite3); migrations are embedded in the binary.
