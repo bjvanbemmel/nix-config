@@ -41,7 +41,7 @@ in
     };
 
     serviceConfig = {
-      ExecStart = "${housey}/bin/backend";
+      ExecStart = "${housey}/bin/housey";
       EnvironmentFile = "-/etc/housey.env"; # optional: without it the IMAP source stays off
       DynamicUser = true;
       StateDirectory = "housey";
