@@ -37,7 +37,6 @@
             ./profiles/${profile}/configuration.nix
             ./system/service/streamkeep/streamkeep.nix
             ./system/service/wakey/wakey.nix
-            ./system/service/housey/housey.nix
           ];
       };
       "storage" = lib.nixosSystem {
